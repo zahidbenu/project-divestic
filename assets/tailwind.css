@@ -579,17 +579,26 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .bg-\[url\(\'assets\/img\/cove\.png\'\)\] {
-    background-image: url('assets/img/cove.png');
+  .bg-\[url\(\"assets\/img\/cover\.png\"\)\] {
+    background-image: url("assets/img/cover.png");
+  }
+  .bg-\[url\(\'\.\.\/\.\.\/assets\/img\/cover\.png\'\)\] {
+    background-image: url('../../assets/img/cover.png');
+  }
+  .bg-\[url\(\'\.\.\/assets\/img\/cover\.png\'\)\] {
+    background-image: url('../assets/img/cover.png');
+  }
+  .bg-\[url\(\'\.\/assets\/img\/cover\.png\'\)\] {
+    background-image: url('./assets/img/cover.png');
+  }
+  .bg-\[url\(\'\/assets\/img\/cover\.png\'\)\] {
+    background-image: url('/assets/img/cover.png');
   }
   .bg-\[url\(\'assets\/img\/cover\.png\'\)\] {
     background-image: url('assets/img/cover.png');
   }
   .bg-\[url\(\'assets\/img\/user-1\.png\'\)\] {
     background-image: url('assets/img/user-1.png');
-  }
-  .bg-\[url\(assets\/img\/cover\.png\)\] {
-    background-image: url(assets/img/cover.png);
   }
   .bg-cover {
     background-size: cover;
@@ -653,12 +662,6 @@
   }
   .py-\[10px\] {
     padding-block: 10px;
-  }
-  .py-\[14px\] {
-    padding-block: 14px;
-  }
-  .py-\[16px\] {
-    padding-block: 16px;
   }
   .py-\[30px\] {
     padding-block: 30px;
@@ -859,36 +862,6 @@
       }
     }
   }
-  .hover\:scale-101 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-scale-x: 101%;
-        --tw-scale-y: 101%;
-        --tw-scale-z: 101%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-  .hover\:scale-102 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-scale-x: 102%;
-        --tw-scale-y: 102%;
-        --tw-scale-z: 102%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-  .hover\:scale-103 {
-    &:hover {
-      @media (hover: hover) {
-        --tw-scale-x: 103%;
-        --tw-scale-y: 103%;
-        --tw-scale-z: 103%;
-        scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
   .hover\:scale-105 {
     &:hover {
       @media (hover: hover) {
@@ -896,14 +869,6 @@
         --tw-scale-y: 105%;
         --tw-scale-z: 105%;
         scale: var(--tw-scale-x) var(--tw-scale-y);
-      }
-    }
-  }
-  .hover\:border {
-    &:hover {
-      @media (hover: hover) {
-        border-style: var(--tw-border-style);
-        border-width: 1px;
       }
     }
   }
@@ -918,48 +883,6 @@
     &:hover {
       @media (hover: hover) {
         background-color: #00A0C1;
-      }
-    }
-  }
-  .hover\:bg-\[\#16697A\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #16697A;
-      }
-    }
-  }
-  .hover\:bg-\[\#FFA65B\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #FFA65B;
-      }
-    }
-  }
-  .hover\:bg-\[\#b27116\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #b27116;
-      }
-    }
-  }
-  .hover\:bg-\[\#c77400\] {
-    &:hover {
-      @media (hover: hover) {
-        background-color: #c77400;
-      }
-    }
-  }
-  .hover\:bg-orange-400 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-orange-400);
-      }
-    }
-  }
-  .hover\:bg-orange-600 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-orange-600);
       }
     }
   }
