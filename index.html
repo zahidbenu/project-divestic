@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jquery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- slick -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- tailwind -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- header -->
+    <header class="header flex justify-between items-center h-[104px] max-md:h-[74px] max-sm:h-[64px] relative">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <div class="w-3/4 flex justify-start max-md:w-1/2">
+                    <!-- site logo -->
+                    <div class="w-1/4 max-md:w-full">
+                        <a href=""><img src="assets/img/Divestic.svg" alt="Site Logo"></a>
+                    </div>
+                    
+                    <!-- desktop menu -->
+                    <nav class="w-3/4 flex justify-start max-md:hidden">
+                        <ul class="flex justify-center">
+                            <li><a href="" class="font-semibold leading-[24px] py-3 mx-4 hover:text-gray-700">Home</a></li>
+                            <li><a href="" class="font-semibold leading-[24px] py-3 mx-4 hover:text-gray-700">Product</a></li>
+                            <li><a href="" class="font-semibold leading-[24px] py-3 mx-4 hover:text-gray-700">Pricing</a></li>
+                            <li><a href="" class="font-semibold leading-[24px] py-3 mx-4 hover:text-gray-700">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- mobile menu -->
+                    <nav class="mobile-menu hidden absolute top-13 left-0 w-full bg-[#F6F6F6] py-25">
+                        <ul class="flex flex-col justify-center items-center gap-[30px]">
+                            <li><a href="" class="font-normal text-3xl leading-[45px] py-3 mx-4 hover:text-gray-700">Home</a></li>
+                            <li><a href="" class="font-normal text-3xl leading-[45px] py-3 mx-4 hover:text-gray-700">Product</a></li>
+                            <li><a href="" class="font-normal text-3xl leading-[45px] py-3 mx-4 hover:text-gray-700">Pricing</a></li>
+                            <li><a href="" class="font-normal text-3xl leading-[45px] py-3 mx-4 hover:text-gray-700">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="w-1/4 flex justify-end items-center max-md:w-1/2">
+                    <!-- search box -->
+                    <div class="search-box hidden w-[650px] absolute top-8.5 mr-10 max-2xl:w-[480px] max-xl:top-17 max-md:top-14 max-sm:w-full max-sm:left-0 max-sm:right-0 max-sm:top-12 max-sm:px-4">
+                        <form action="" method="" class="relative w-full">
+                            <input type="text" placeholder="Write to search..." 
+                                class="w-full bg-white px-4 pl-10 py-2.5 rounded-full ring-1 ring-[#BDBDBD] focus:ring-2 focus:outline-none">
+                            <button type="submit" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500">
+                                <img src="assets/img/search.svg" alt="search-icon" class="w-4 opacity-75">
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- search icon -->
+                    <div class="flex items-center py-3">
+                        <button id="searchToggle">
+                            <img src="assets/img/search.svg" alt="search icon" class="w-5">
+                        </button>
+                    </div>
+
+                    <!-- cart icon -->
+                    <div class="flex items-center py-3 ml-6 max-sm:ml-4">
+                        <button>
+                            <img src="assets/img/cart.svg" alt="cart icon" class="w-5">
+                        </button>
+                    </div>
+
+                    <!-- mobile menu icon -->
+                    <div class="hidden flex items-center py-3 ml-6 max-md:block max-sm:ml-4">
+                        <button id="menuToggle">
+                            <img src="assets/img/menu.svg" alt="menu icon" class="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- hero -->
+    <section class="h-screen bg-[url('assets/img/cover.png')] bg-cover bg-no-repeat bg-right overflow-hidden -mt-[104px] flex items-center max-lg:bg-center max-md:h-full max-md:bg-left max-md:py-20 max-md:pt-[104px] max-sm:bg-center max-sm:bg-[length:400%]">
+        <div class="container">
+            <div class="pt-[5%]">
+                <h1 class="font-extrabold text-6xl text-[#252B42] uppercase leading-[80px] max-md:text-[40px] max-md:leading-[60px] max-sm:text-center">Empower <br> Your Business</h1>
+                <p class="text-xl leading-[30px] my-9 max-sm:text-center max-sm:px-15">We know how large objects will act, <br class="max-sm:hidden"> but things on a small scale.</p>
+
+                <div class="flex gap-4 max-sm:block">
+                    <a href="" class="block font-bold leading-[28px] text-white bg-[#FFA62B] py-[10px] px-9 rounded-full border border-[#FFA62B] hover:text-[#FFA62B] hover:bg-white max-w-max max-sm:mx-auto">Get Quote Now</a>
+                    <a href="" class="block font-bold leading-[28px] text-[#00A0C1] bg-transparent py-[10px] px-9 rounded-full border border-[#00A0C1] hover:bg-[#00A0C1] hover:text-white max-w-max max-sm:mx-auto max-sm:mt-5">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- featured services -->
+     <section class="py-25">
+        <div class="container">
+            <!-- section intro -->
+            <div class="py-11 max-sm:pr-8">
+                <h2 class="uppercase">Why <br class="hidden max-sm:block"> Choose Us</h2>
+                <p class="mt-4">Problems trying to resolve the conflict between <br> 
+                    the two major realms of Classical physics: Newtonian mechanics </p>
+            </div>
+
+            <!-- services grid -->
+            <div class="grid grid-cols-3 gap-[30px] max-lg:grid-cols-2 max-sm:grid-cols-1">
+                <!-- single service 1 -->
+                <div class="relative flex items-center gap-4 bg-[#FAFAFA] border border-[#E2E2E2] round-[2px] p-5 shadow-[0px_2px_4px_0px_#0000001A] transform transition duration-300 hover:-translate-y-1">
+                    <span class="bg-[#00A0C1] w-18 h-18 rounded-full flex justify-center items-center">
+                        <img src="assets/img/icon-3.png" alt="">
+                    </span>
+
+                    <h6>Digital Marketing</h6>
+
+                    <a href="" class="absolute inset-0"></a>
+                </div>
+
+                <!-- single service 2 -->
+                <div class="relative flex items-center gap-4 bg-[#FAFAFA] border border-[#E2E2E2] round-[2px] p-5 shadow-[0px_2px_4px_0px_#0000001A] transform transition duration-300 hover:-translate-y-1">
+                    <span class="bg-[#00A0C1] w-18 h-18 rounded-full flex justify-center items-center">
+                        <img src="assets/img/icon-2.png" alt="">
+                    </span>
+
+                    <h6>Graphics Design</h6>
+
+                    <a href="" class="absolute inset-0"></a>
+                </div>
+
+                <!-- single service 3 -->
+                <div class="relative flex items-center gap-4 bg-[#FAFAFA] border border-[#E2E2E2] round-[2px] p-5 shadow-[0px_2px_4px_0px_#0000001A] transform transition duration-300 hover:-translate-y-1">
+                    <span class="bg-[#00A0C1] w-18 h-18 rounded-full flex justify-center items-center">
+                        <img src="assets/img/icon-1.png" alt="">
+                    </span>
+
+                    <h6>Web Development</h6>
+
+                    <a href="" class="absolute inset-0"></a>
+                </div>
+
+                <!-- single service 4 -->
+                <div class="relative flex items-center gap-4 bg-[#FAFAFA] border border-[#E2E2E2] round-[2px] p-5 shadow-[0px_2px_4px_0px_#0000001A] transform transition duration-300 hover:-translate-y-1">
+                    <span class="bg-[#00A0C1] w-18 h-18 rounded-full flex justify-center items-center">
+                        <img src="assets/img/icon-4.png" alt="">
+                    </span>
+
+                    <h6>Video Editing</h6>
+
+                    <a href="" class="absolute inset-0"></a>
+                </div>
+
+                <!-- single service 5 -->
+                <div class="relative flex items-center gap-4 bg-[#FAFAFA] border border-[#E2E2E2] round-[2px] p-5 shadow-[0px_2px_4px_0px_#0000001A] transform transition duration-300 hover:-translate-y-1">
+                    <span class="bg-[#00A0C1] w-18 h-18 rounded-full flex justify-center items-center">
+                        <img src="assets/img/icon-5.png" alt="">
+                    </span>
+
+                    <h6>App Development</h6>
+
+                    <a href="" class="absolute inset-0"></a>
+                </div>
+
+                <!-- single service 6 -->
+                <div class="relative flex items-center gap-4 bg-[#FAFAFA] border border-[#E2E2E2] round-[2px] p-5 shadow-[0px_2px_4px_0px_#0000001A] transform transition duration-300 hover:-translate-y-1">
+                    <span class="bg-[#00A0C1] w-18 h-18 rounded-full flex justify-center items-center">
+                        <img src="assets/img/icon-6.png" alt="">
+                    </span>
+
+                    <h6>AI Animation</h6>
+
+                    <a href="" class="absolute inset-0"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- featured about -->
+     <section class="bg-[#FAFAFA] py-25">
+        <div class="container">
+            <!-- section intro -->
+            <div class="w-135 mx-auto text-center mb-25 max-md:w-full">
+                <h2 class="">We are providing best 
+                    business service.</h2>
+                <p class="mt-4 max-md:px-20 max-sm:px-8">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics</p>
+            </div>
+
+            <div class="flex justify-between items-center flex-wrap">
+                <!-- section video -->
+                <div class="w-1/2 h-[442px] border border-[#DEDEDE] shadow-lg max-lg:w-full">
+                    <!-- Aspect Ratio Wrapper -->
+                    <div class="relative h-full w-full group bg-black">
+                        <!-- Thumbnail -->
+                        <img
+                        src="assets/img/video-thumb.png"
+                        alt="Video Thumbnail"
+                        class="videoThumbnail absolute top-0 left-0 w-full h-full object-cover z-10">
+
+                        <!-- Play Button -->
+                        <button
+                            id="playButton"
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-20 transform transition-transform group-hover:scale-110">
+                            
+                            <svg class="w-[98px] h-[98px] text-white drop-shadow-lg hover:fill-white" fill="currentColor" viewBox="0 0 84 84">
+                                <circle opacity="1" cx="42" cy="42" r="42" fill="#00A0C1" />
+                                <polygon fill="white" points="36,30 36,54 58,42" />
+                            </svg>
+                        </button>
+
+                        <!-- Video Frame Container -->
+                        <div class="videoFrame absolute inset-0" id=""></div>
+                    </div>
+                </div>
+                
+                <!-- section meta -->
+                <div class="w-1/2 pl-30 max-lg:w-full max-lg:pl-0 max-lg:mt-25">
+                    <h2>Most trusted in our field</h2>
+                    <p class="mt-4 mb-8">Most calendars are designed for teams. Slate 
+                        is designed for freelancers who want a 
+                        simple way to plan their schedule.</p>
+
+                    <!-- single box 1 -->
+                    <div class="flex gap-5">
+                        <span><img src="assets/img/icon-8.png" alt=""></span>
+
+                        <div class="">
+                            <h5 class="text-base leading-[24px]">A quick fox jumps over the lazy 
+                                dog</h5>
+                            <h6>Things on a very small scale ...</h6>
+                        </div>
+                    </div>
+
+                    <!-- single box 2 -->
+                    <div class="flex gap-5 mt-8">
+                        <span><img src="assets/img/icon-7.png" alt=""></span>
+                        
+                        <div class="">
+                            <h5 class="text-base leading-[24px]">A quick fox jumps over the lazy dog</h5>
+                            <h6>Things on a very small scale ...</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+     </section>
+
+    <!-- testimonial -->
+     <section class="bg-[#16697A] py-20">
+        <div class="container">
+            <!-- section intro -->
+            <div class="w-120 mx-auto text-center mb-20 max-md:w-full">
+                <h2 class="!text-white">What Clients Say</h2>
+                <p class="mt-4 text-white max-md:px-20 max-sm:px-8">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics</p>
+            </div>
+        </div>
+
+        <div class="testimonial-slider flex justify-between mb-3">
+            <!-- single slide 1 -->
+            <div class="px-4 max-md:py-4">
+                <div class="single-slide relative pl-16 max-md:pl-7.5">
+                    <div class="bg-white px-15 py-[30px] max-md:px-20 max-sm:pr-4">
+                        <!-- user img -->
+                        <div class="absolute top-7 left-0 w-24 h-24 rounded-full">
+                            <img src="assets/img/user-2.png" alt="user img" class="w-full rounded-full">
+                        </div>
+    
+                        <!-- user meta -->
+                        <div class="">
+                            <h3>Regina Miles</h3>
+                            <h6>Designer</h6>
+    
+                            <!-- rating -->
+                            <ul class="flex text-[#F3CD03] text-base gap-[2px] my-4">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+    
+                            <p>This proved to be impossible using the traditional 
+                                concepts of space and time. Einstein developed a 
+                                new view of time first and then space. This proved 
+                                to be impossible using the traditional concepts of 
+                                space and time. Einstein developed a new view 
+                                of time first and then space.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- single slide 2 -->
+            <div class="px-4 max-md:py-4">
+                <div class="single-slide relative pl-16 max-md:pl-7.5">
+                    <div class="bg-white px-15 py-[30px] max-md:px-20 max-sm:pr-4">
+                        <!-- user img -->
+                        <div class="absolute top-7 left-0 w-24 h-24 rounded-full">
+                            <img src="assets/img/user-1.png" alt="user img" class="w-full rounded-full">
+                        </div>
+    
+                        <!-- user meta -->
+                        <div class="">
+                            <h3>Regina Miles</h3>
+                            <h6>Designer</h6>
+    
+                            <!-- rating -->
+                            <ul class="flex text-[#F3CD03] text-base gap-[2px] my-4">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+    
+                            <p>This proved to be impossible using the traditional 
+                                concepts of space and time. Einstein developed a 
+                                new view of time first and then space. This proved 
+                                to be impossible using the traditional concepts of 
+                                space and time. Einstein developed a new view 
+                                of time first and then space.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- single slide 3 -->
+            <div class="px-4 max-md:py-4">
+                <div class="single-slide relative pl-16  max-md:pl-7.5">
+                    <div class="bg-white px-15 py-[30px] max-md:px-20 max-sm:pr-4">
+                        <!-- user img -->
+                        <div class="absolute top-7 left-0 w-24 h-24 rounded-full">
+                            <img src="assets/img/user-3.png" alt="user img" class="w-full rounded-full">
+                        </div>
+    
+                        <!-- user meta -->
+                        <div class="">
+                            <h3>Regina Miles</h3>
+                            <h6>Designer</h6>
+    
+                            <!-- rating -->
+                            <ul class="flex text-[#F3CD03] text-base gap-[2px] my-4">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+    
+                            <p>This proved to be impossible using the traditional 
+                                concepts of space and time. Einstein developed a 
+                                new view of time first and then space. This proved 
+                                to be impossible using the traditional concepts of 
+                                space and time. Einstein developed a new view 
+                                of time first and then space.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- single slide 4 -->
+            <div class="px-4 max-md:py-4">
+                <div class="single-slide relative pl-16  max-md:pl-7.5">
+                    <div class="bg-white px-15 py-[30px] max-md:px-20 max-sm:pr-4">
+                        <!-- user img -->
+                        <div class="absolute top-7 left-0 w-24 h-24 rounded-full">
+                            <img src="assets/img/user-2.png" alt="user img" class="w-full rounded-full">
+                        </div>
+    
+                        <!-- user meta -->
+                        <div class="">
+                            <h3>Regina Miles</h3>
+                            <h6>Designer</h6>
+    
+                            <!-- rating -->
+                            <ul class="flex text-[#F3CD03] text-base gap-[2px] my-4">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+    
+                            <p>This proved to be impossible using the traditional 
+                                concepts of space and time. Einstein developed a 
+                                new view of time first and then space. This proved 
+                                to be impossible using the traditional concepts of 
+                                space and time. Einstein developed a new view 
+                                of time first and then space.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- team -->
+    <section class="bg-[#FAFAFA] py-20">
+        <div class="container">
+            <!-- section intro -->
+            <div class="w-120 mx-auto text-center mb-25 max-md:w-full">
+                <h2 >Meet Our Team</h2>
+                <p class="mt-4 max-md:px-20 max-sm:px-8">Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics</p>
+            </div>
+
+            <div class="grid grid-cols-4 gap-[30px] max-lg:grid-cols-2 max-sm:grid-cols-1">
+                <!-- single team member 1 -->
+                <div class="bg-white flex flex-col justify-center items-center text-center gap-[5px] py-[30px] px-10 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img src="assets/img/user-2.png" alt="" class="w-32 h-32 rounded-full">
+                    <h6 class="!text-[#FFA62B]">Consultant</h6>
+                    <h5 class="text-base leading-[24px]">Rodney Stratton</h5>
+                    <p>A quick fox jumps over the lazy dog. The fox jumps over the lazy dog.</p>
+                </div>
+
+                <!-- single team member 2 -->
+                <div class="bg-white flex flex-col justify-center items-center text-center gap-[5px] py-[30px] px-10 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img src="assets/img/team-1.png" alt="" class="w-32 h-32 rounded-full">
+                    <h6 class="!text-[#FFA62B]">CO Founder</h6>
+                    <h5 class="text-base leading-[24px]">Avie Beaton</h5>
+                    <p>A quick fox jumps over the lazy dog. The fox jumps over the lazy dog.</p>
+                </div>
+
+                <!-- single team member 3 -->
+                <div class="bg-white flex flex-col justify-center items-center text-center gap-[5px] py-[30px] px-10 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img src="assets/img/team-2.png" alt="" class="w-32 h-32 rounded-full">
+                    <h6 class="!text-[#FFA62B]">CEO</h6>
+                    <h5 class="text-base leading-[24px]">Ashley Fletcher</h5>
+                    <p>A quick fox jumps over the lazy dog. The fox jumps over the lazy dog.</p>
+                </div>
+
+                <!-- single team member 4 -->
+                <div class="bg-white flex flex-col justify-center items-center text-center gap-[5px] py-[30px] px-10 transform transition-transform duration-300 hover:-translate-y-1">
+                    <img src="assets/img/user-3.png" alt="" class="w-32 h-32 rounded-full">
+                    <h6 class="!text-[#FFA62B]">Consultant</h6>
+                    <h5 class="text-base leading-[24px]">Rodney Stratton</h5>
+                    <p>A quick fox jumps over the lazy dog. The fox jumps over the lazy dog.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact -->
+    <section>  
+        <!-- contact head-->
+        <div class="bg-[#252B42] h-[807px] py-20 max-lg:h-[860px] max-md:h-full">
+            <div class="container">
+                <div class="flex justify-between items-center mb-20 max-md:flex-col max-md:gap-15 max-md:mb-0">
+                    <!-- section intro -->
+                    <div class="w-120 max-md:w-full">
+                        <h2 class="!text-white">We Have Branches All 
+                            Over The World</h2>
+                        <p class="mt-4 text-white">The gradual accumulation of information about atomic and small-scale behaviour during the first quarter of the 20th century, which gave some indications about how small things do behave, produced an increasing confusion which was Heisenberg, and Born.</p>
+                    </div>
+
+                    <div class="max-md:-mb-5">
+                        <img src="assets/img/map.png" alt="map image">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- contact main-->
+        <div class="bg-[#FAFAFA] py-[50px] max-md:py-0 max-md:bg-white">
+            <div class="md:container mx-auto w-full px-4 max-md:px-0">
+                <div class="flex justify-between items-stretch py-[50px] -mt-[460px] max-md:mt-0 max-md:flex-col max-md:py-0">
+                    <!-- banner -->
+                    <div class="w-1/3 max-md:w-full">
+                        <img src="assets/img/contact-banner.jpeg" alt="" class="h-full object-cover w-full">
+                    </div>
+
+                    <!-- form -->
+                    <div class="w-2/3 bg-white px-[50px] py-10 max-md:w-full max-md:container max-md:mx-auto max-sm:px-[45px]">
+                        <h2>Get A Free Quote Here</h2>
+                        <form action="" class="flex flex-col mt-10 gap-3">
+                            <label for="" class="text-[#252B42] font-semibold leading-[24px]">Name*</label>
+                            <input type="text" name="" id="" 
+                            placeholder="Full Name"
+                            class="h-[50px] bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-5 focus:outline-[#BDBDBD] placeholder:font-normal placeholder:leading-[28px] placeholder:text-[#737373]">
+
+                            <label for="" class="text-[#252B42] font-semibold leading-[24px]">Email*</label>
+                            <input type="email" name="" id="" 
+                            placeholder="example@gmail.com"
+                            class="h-[50px] bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-5 focus:outline-[#BDBDBD] placeholder:font-normal placeholder:leading-[28px] placeholder:text-[#737373]">
+
+                            <label for="" class="text-[#252B42] font-semibold leading-[24px]">Department*</label>
+                            <div class="relative w-full">
+                                <select name="" id="" class="h-[50px] w-full appearance-none bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-5 focus:outline-[#BDBDBD]">
+                                    <option value="" class="font-normal leading-[28px] text-[#737373]">Please Select</option>
+                                    <option value="" class="font-normal leading-[28px] text-[#737373]">Software Development</option>
+                                    <option value="" class="font-normal leading-[28px] text-[#737373]">Business Marketing</option>
+                                    <option value="" class="font-normal leading-[28px] text-[#737373]">Graphics Design</option>
+                                </select>
+
+                                <span class="pointer-events-none absolute inset-y-0 right-5 flex items-center text-gray-700">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                    </svg>
+                                </span>
+                            </div>
+
+                            <label for="" class="text-[#252B42] font-semibold leading-[24px]">Time*</label>
+                            <div class="relative w-full">
+                                <select name="" id=""
+                                  class="h-[50px] w-full appearance-none bg-[#F9F9F9] border border-[#BDBDBD] rounded-[5px] px-5 pr-10 text-[#737373] focus:outline-none">
+                                  <option value="" class="font-normal leading-[28px]">4.00 Available</option>
+                                  <option value="" class="font-normal leading-[28px]">5.00 Available</option>
+                                  <option value="" class="font-normal leading-[28px]">12.00 Available</option>
+                                  <option value="" class="font-normal leading-[28px]">10.00 Available</option>
+                                </select>
+                              
+                                <span class="pointer-events-none absolute inset-y-0 right-5 flex items-center text-gray-700">
+                                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                  </svg>
+                                </span>
+                            </div>
+
+                            <button type="submit" class="font-bold text-white leading-[28px] bg-[#FFA62B] px-10 py-4 rounded-[5px] mt-10 hover:bg-[#FFA65B]">Book Appointment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <!-- footer -->
+    <footer>
+        <div class="container max-md:flex max-md:justify-center">
+            <div class="flex justify-around py-20 gap-20 max-lg:justify-between max-lg:flex-wrap max-md:flex-col">
+                <div class="">
+                    <h3>Get In Touch</h3>
+                    <p class="my-6">A quick fox jumps over thelazy dog</p>
+
+                    <ul class="flex items-center gap-5">
+                        <li><a href="">
+                            <img src="assets/img/facebook.png" alt="" class="transform transition-transform duration-300 hover:scale-105">
+                        </a></li>
+
+                        <li><a href="">
+                            <img src="assets/img/instagram.png" alt="" class="transform transition-transform duration-300 hover:scale-105">
+                        </a></li>
+
+                        <li><a href="" class="text-black text-2xl ">
+                            <i class="fa-brands fa-x-twitter transform transition-transform duration-300 hover:scale-105"></i>
+                        </a></li>
+
+                        <li><a href="" class="">
+                            <img src="assets/img/youtube.png" alt="" class="w-7 transform transition-transform duration-300 hover:scale-105">
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- footer menu 1 -->
+                <div class="">
+                    <h3>Company Info</h3>
+
+                    <ul class="flex flex-col gap-2.5 mt-5">
+                        <li><a href="" class="py-1 hover:text-gray-700">About Us</a></li>
+                        <li><a href="" class="py-1 hover:text-gray-700">Carrier</a></li>
+                        <li><a href="" class="py-1 hover:text-gray-700">We are hiring</a></li>
+                        <li><a href="" class="py-1 hover:text-gray-700">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- footer menu 2 -->
+                <div class="">
+                    <h3>Features</h3>
+
+                    <ul class="flex flex-col gap-2.5 mt-5">
+                        <li><a href="" class="py-1 hover:text-gray-700">Business Marketing</a></li>
+                        <li><a href="" class="py-1 hover:text-gray-700">User Analytic</a></li>
+                        <li><a href="" class="py-1 hover:text-gray-700">Live Chat</a></li>
+                        <li><a href="" class="py-1 hover:text-gray-700">Unlimited Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- footer menu 3 -->
+                <div class="">
+                    <h3>Resources</h3>
+
+                    <ul class="flex flex-col gap-2.5 mt-5">
+                        <li><a href="" class="py-1 hover:text-gray-700">IOS & Android</a></li>
+                        <li><a href="" class="py-1 hover:text-gray-700">Watch a Demo</a></li>
+                        <li><a href="" class="py-1 hover:text-gray-700">Customers</a></li>
+                        <li><a href="" class="py-1 hover:text-gray-700">API</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer foot -->
+        <div class="bg-[#FAFAFA] h-19 flex justify-center items-center text-center max-sm:px-10">
+            <h6>Made With Love By Figmaland All Right Reserved</h6>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
