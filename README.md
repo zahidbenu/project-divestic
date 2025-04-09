@@ -16,6 +16,11 @@ Here is the live link of the site:
 - **CSS3** - Applied a bit for mandatory purposes
 - **Jquery** - Interactive elements and functionality
 
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/zahidbenu/project-divestic.git
+
 ## Contact Me
 
 You can reach me if you prefer:
