@@ -7,7 +7,7 @@ I utilized Tailwind's responsive utility classes to ensure the site works seamle
 ## Live Demo
 
 Here is the live link of the site:  
-[Live](https://zahidbenu.github.io/project-divestic/)
+[Project Live](https://zahidbenu.github.io/project-divestic/)
 
 ## Technologies I Have Used
 
