@@ -88,9 +88,7 @@ $(document).ready(function() {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
-          vertical: true,
-          verticalSwiping: true,
+          slidesToShow: 1,
           centerMode: false,
         }
       },
