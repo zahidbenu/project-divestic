@@ -56,7 +56,7 @@ $(document).ready(function() {
   // slick
   $('.testimonial-slider').slick({
     centerMode: true,
-    centerPadding: '280px',
+    centerPadding: '365px',
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
